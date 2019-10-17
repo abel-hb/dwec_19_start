@@ -11,20 +11,20 @@
 <body>
     <section>
         <br>
-            <form class="formulario" action="#" method="POST" onsubmit="">
+            <form class="formulario" action="#" method="POST" onsubmit="return validar()">
                 <h1>FORMULARIO FORTNITE</h1><BR>  
                 <p>
-                        Nombre: <input type="text" name="name" autofocus/><br>
-                        Apellidos: <input type="text" name="ape" autofocus/>
+                        Nombre: <input type="text" name="name" autofocus onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)"/><br>
+                        Apellidos: <input type="text" name="ape" autofocus onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)"/>
                         <br />
                         Correo Electr&oacute;nico:
-                        <input type="email" name="email" />
+                        <input type="email" name="email" onkeyup="comprobar(this,/^[-\w.%+]+@(?:[A-Z0-9-]+\.)+[A-Z]+$/,1,20)" />
                         <br />
                         Tel&eacute;fono: <input type="tel" name="tel" />
                         <br />
                         Nombre Usuario: <input type="text" name="user" autofocus/>
                         <br />
-                        Fecha Nac: <input type="date" name="fecha" /><br><br>
+                        Fecha Nac: <input type="date" name="fecha" onkeyup="comprobar(this,/^(0?[1-9]|[12]\d|3[01])(\/|\-)(0?[1-9]|1[012])(\/|\-)\d{4}$/,10,10)" /><br><br>
                         <input type="submit" value="Enviar" />
                         <input type="reset" value="Resetear"/>
                     </p>
