@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FORMULARIO FORTNITE</title>
-    <script src="js/form.js" type="text/javascript"></script>
+   
     <link rel="stylesheet" href="css/eslito.css">
 </head>
 
 <body>
+        <script src="js/form.js" type="text/javascript"></script>
     <section>
         <br>
         <form class="formulario" action="#" method="post" onsubmit="return validar()">
@@ -25,7 +26,7 @@
                 <span id="errorEmail"></span><br />
                 Tel&eacute;fono: <input id="Telefono" type="tel" name="tel" />
                 <span id="errorTelefono"></span><br />
-                Nombre Usuario: <input type="text" name="user" autofocus />
+                Nombre Usuario: <input id="Nombre" type="text" name="user" autofocus />
                 <span id="errorNombre"></span><br />
                 Fecha Nac: <input id="Fecha" class="input" type="date" name="fecha"
                     onkeyup="comprobar(this,/^(0?[1-9]|[12]\d|3[01])(\/|\-)(0?[1-9]|1[012])(\/|\-)\d{4}$/,10,10)" />
