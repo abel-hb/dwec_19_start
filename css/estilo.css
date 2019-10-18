@@ -2,6 +2,15 @@
     padding: 0;
     margin: 0;
 }
-.formulario{
-    
+.zona{
+    background-color: #F9E6D2;
+    border-bottom: 1px solid #B16412;
+}
+.text{
+    display: block;
+    font-size: small;
+}
+.centro{
+    float: left;
+    padding: 10px; 
 }
