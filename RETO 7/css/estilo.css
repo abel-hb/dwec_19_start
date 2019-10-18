@@ -1,31 +1,75 @@
-*{
-    padding: 0;
+* {
     margin: 0;
 }
-.zona{
-    background-color: #F9E6D2;
+
+.clear {
+    clear: both;
+}
+
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+/*Formulario*/
+
+
+.h1 {
+    border-bottom: 1px solid #B16412;
+
+
+}
+
+.zona1 {
+  background-color: #F9E6D2;
     border-bottom: 1px solid #B16412;
 }
-.text{
+
+
+
+
+.izquierda {
+    float: left;
+    width: 100px;
+    text-align: right;
+    padding: 10px;
+}
+
+.centro {
+    float: left;
+    padding: 10px;
+}
+
+.etiqueta{
     display: block;
     font-size: small;
 }
-.centro{
-    float: left;
-    padding: 20px;
-	text-align:center;
-	margin: 50px;
-	margin-left: 44%;
+
+
+.lista {
+    list-style-type: none;
 }
-h1{
-    text-align: center;
+
+.contenedor {
+font-size: small;
+    width: 1000px;
+    height: 800px;
+    padding-top: 50px;
 }
-footer{
-	text-align: center;
-	margin: 25em;
-	background-color: #F9E6D2;
-    border-bottom: 1px solid #B16412;
+
+.input {
+    padding: 5px;
 }
-form{
-	text-align: center;
+
+
+
+.largeinput {
+    width: 300px;
+}
+
+.smallinput {
+    width: 100px;
 }
