@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORMULARIO FORTNITE</title>
+	<script src="js/form.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+        
+    <section class="zona">
+        <br>
+        <form class="formulario" action="#" method="post" onsubmit="return validar()">
+            <h1>FORMULARIO FORTNITE</h1><BR>
+            <p class="centro">
+                <span class="text">Nombre</span>     
+                <input id="Nombre" class="input" type="text" name="Nombre" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)" />
+                <span id="errorNombre"></span><br>
+                
+                <span class="text">Apellido</span>     
+                <input id="Apellido" class="largeinput input" type="text" name="Apellido" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)" />
+                <span id="errorApellido"></span><br />
+
+                <span class="text">Email</span>
+                <input id="Email" class="largeinput input" type="text" name="email" onkeyup="comprobar(this,/^[-\w.%+]+@(?:[A-Z0-9-]+\.)+[A-Z]+$/,1,20)" />
+                <span id="errorEmail"></span><br />
+
+                <span class="text">Telefono</span>
+                <input id="Telefono" type="tel" name="tel" />
+                <span id="errorTelefono"></span><br />
+
+                <span class="text">Nombre Usuario</span>
+                <input id="Nombre" type="text" name="user" />
+                <span id="errorNombre"></span><br />
+
+                <span class="text">Fecha Nac</span>
+                <input id="Fecha" class="input" type="date" name="fecha"
+                    onkeyup="comprobar(this,/^(0?[1-9]|[12]\d|3[01])(\/|\-)(0?[1-9]|1[012])(\/|\-)\d{4}$/,10,10)" />
+                <span id="errorFecha"></span><br><br>
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Resetear" />
+            </p>
+        </form>
+        <br>
+    </section>
+    <footer>Todos los derechos reservados. Abel Herrero Barrada y Nuevas Profesiones</footer>
+</body>
+
+</html>
