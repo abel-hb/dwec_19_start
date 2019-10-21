@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validar()" method="POST">
+        Nombre: <input type="text" name="fname" id="nombre"><br>
+        Apellidos: <input type="text" name="fape" id="apellido"><br>
+        Nombre Usuario: <input type="text" name="fuser" id="user"><br>
+        Contraseña: <input type="password" name="fpas" id="pass"><br>
+        Fecha Nac: <input type="date" name="ffec" id="fecha"><br>
+        Correo: <input type="email" name="fema" id="email"><br>
+        <input type="submit" value="Enviar"><input type="reset" value="Reiniciar">
+    </form>
+    <script src="js/validacion.js"></script>
+</body>
+</html>

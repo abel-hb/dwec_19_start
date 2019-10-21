@@ -1,3 +1,4 @@
+alert("Hello World JS")
 function comprobar (campo, expr, iMinimo, iMaximo) {
     let sSalida = '';
     if (expr != "undefined" && !comprobarExpresion(campo, expr)){

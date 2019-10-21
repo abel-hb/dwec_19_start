@@ -1,8 +1,66 @@
-function comprobar(campo,expr){
+function validar(){
+    var x = document.getElementById('nombre').value;
+    if(x == ''){
+        alert("El campo Nombre esta vacio");
+        return false
+    }
+    var x = document.getElementById('apellido').value;
+    if(x == ''){
+        alert("El campo Apellido esta vacio");
+        return false
+    }
+    var x = document.getElementById('user').value;
+    if(x == ''){
+        alert("El campo Usuario esta vacio");
+        return false
+    }
+    
+    var x = document.getElementById('pass').value;
+    if(x == ''){
+        alert("El campo contraseña esta vacio");
+        return false
+    }
+    var x = document.getElementById('fecha').value;
+    if(x == ''){
+        alert("El campo Fecha esta vacio");
+        return false
+    }
+    var x = document.getElementById('email').value;
+    if(x == ''){
+        alert("El campo Correo esta vacio");
+        return false
+    }
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function comprobar(campo,expr){
     if(!expr.test(campo.value))
     alert('El campo ' + campo.getAttribute('id') + ' no se ajusta a ' + expr);
 }
-
 
 function noVacio(campo){
     if(campo.value.length==0)
@@ -15,7 +73,7 @@ function longitud(campo,n,m){
     + ' a ' + m + ' caracteres');
 }
 
-function valida() {
+function validar() {
     var salida='';
     var expr=/^[a-zA-Záéíóú]+(\s[a-zA-Záéíóú]+)+$/;
     if (!expr.test(document.getElementById('nombre').value)){
@@ -44,4 +102,5 @@ function valida() {
     } else {
     return true;
     }
-}
+}*/
+
