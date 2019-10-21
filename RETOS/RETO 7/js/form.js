@@ -1,5 +1,5 @@
-comprobar = (campo, expr, iMinimo, iMaximo) => {
-    let sSalida = "";
+function comprobar (campo, expr, iMinimo, iMaximo) {
+    let sSalida = '';
     if (expr != "undefined" && !comprobarExpresion(campo, expr)){
         sSalida += `El campo ${campo.getAttribute('id')} no se ajusta a ${expr}<br>`;
     }
@@ -15,7 +15,7 @@ comprobar = (campo, expr, iMinimo, iMaximo) => {
     }
 }
 
-comprobarExpresion = (campo, expr) => {
+function comprobarExpresion (campo, expr) {
     if(expr.test(campo.value)){
         return true;
     }else{
@@ -23,7 +23,7 @@ comprobarExpresion = (campo, expr) => {
     }
 }
 
-comprobarLongitud = (campo, iMinimo, iMaximo) => {
+function comprobarLongitud (campo, iMinimo, iMaximo) {
     if (campo.value.length < iMinimo || campo.value.length > iMaximo) {
         return false;
     }else{
@@ -31,7 +31,7 @@ comprobarLongitud = (campo, iMinimo, iMaximo) => {
     }
 }
 
-validar = () => {
+function validar() {
     let salida = '';
     let aInputs = document.getElementsByTagName('input');
     for (var i = 0, length = aInputs.length; i < length; i++){

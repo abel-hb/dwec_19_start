@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FORMULARIO FORTNITE</title>
-  <script src="js/form.js" type="text/javascript"></script>
+  
   <link rel="stylesheet" href="css/estilo.css" type="text/css" />
+  <script src="js/form.js" type="text/javascript"></script>
 </head>
 <body>
   <header></header>
@@ -23,11 +24,11 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Nombre</span>
-            <input id="Nombre" class="input" name="name" type="text" maxlength="20" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)">
+            <input id="nombre" class="input" name="name" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
             <span id="errorNombre"></span>
 
             <span class="etiqueta">Apellido</span>
-            <input id="Apellido" class="largeinput input" name="apellido" type="text" maxlength="20" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)">
+            <input id="apellido" class="largeinput input" name="apellido" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
             <span id="errorApellido1"></span>
 
           </section>
@@ -39,17 +40,17 @@
           </section>
           <section class="centro">
             <span class="etiqueta"> Nombre Usuario</span>
-			<input id="Nombre" class="input" name="name" type="text" maxlength="20" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)">
+			<input id="user" class="input" name="name" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
             <span id="errorNombre"></span>
 
             <section>
               <span class="etiqueta">Telefono</span>
-              <input id="Telefono" class="smallinput input" name="tlf" type="text" maxlength="9" onkeyup="comprobar(this,/\d{9}/,9,9)">
+              <input id="tlf" class="smallinput input" name="tlf" type="text" maxlength="9" onchange="comprobar(this,/\d{9}/,9,9)">
               <span id="errorTelefono"></span>
 
 
               <span class="etiqueta">Localidad</span>
-              <input id="Localidad" class="input" name="municipio" type="text" maxlength="30" onkeyup="comprobar(this,'undefined',10,30)">
+              <input id="Localidad" class="input" name="municipio" type="text" maxlength="30" onchange="comprobar(this,'undefined',10,30)">
               <span id="errorLocalidad"></span>
 
             </section>
@@ -62,7 +63,7 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Correo</span>
-            <input id="Email" class="largeinput input" name="email" type="text" onkeyup="comprobar(this,/^[-\w.%+]+@(?:[A-Z0-9-]+\.)+[A-Z]+$/,1,20)">
+            <input id="email" class="largeinput input" name="email" type="text" onchange="comprobar(this,/^[-\w.%+]+@(?:[A-Z0-9-]+\.)+[A-Z]+$/,1,20)">
             <span id="errorEmail"></span>
 
           </section>
