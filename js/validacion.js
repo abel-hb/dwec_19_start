@@ -57,11 +57,11 @@ function validar(){
 
 
 
-/*function comprobar(campo,expr){
+function comprobar(campo,expr){
     if(!expr.test(campo.value))
-    alert('El campo ' + campo.getAttribute('id') + ' no se ajusta a ' + expr);
+    alert('El campo ' + campo.getAttribute('id') + ' solo puede contener caracteres' );
 }
-
+/*
 function noVacio(campo){
     if(campo.value.length==0)
     alert('El campo ' + campo.getAttribute('id') + ' está vacío');

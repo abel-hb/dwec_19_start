@@ -8,7 +8,7 @@
 </head>
 <body>
     <form name="myForm" onsubmit="return validar()" method="POST">
-        Nombre: <input type="text" name="fname" id="nombre"><br>
+        Nombre: <input type="text" name="fname" id="nombre" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)"><br>
         Apellidos: <input type="text" name="fape" id="apellido"><br>
         Nombre Usuario: <input type="text" name="fuser" id="user"><br>
         Contraseña: <input type="password" name="fpas" id="pass"><br>
