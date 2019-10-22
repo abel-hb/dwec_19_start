@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="css/estilo.css" type="text/css" />
   
 </head>
-<body>
+<body background="css/225661.jpg">
   <header></header>
   <nav></nav>
   <article>
     <form class="contenedor" action="#" method="post" onsubmit="return validar()">
       <ul class="lista">
         <li class="h1">
-          <h1>FORMULARIO FORTNITE</h1>
+          <img src="css/fortnite.png" width="50%" height="30%">
         </li>
         <li class="zona1">
           <section class="izquierda">
@@ -24,11 +24,11 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Nombre</span>
-            <input id="nombre" class="input" name="Nombre" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off">
+            <input id="nombre" class="input" name="Nombre" placeholder="Nombre: Abel" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off">
             <span id="errorNombre"></span>
 
             <span class="etiqueta">Apellido</span>
-            <input id="apellido" class="input" name="Apellido" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" required autocomplete="off">
+            <input id="apellido" class="input" name="Apellido" placeholder="Apellido: Herrero" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" required autocomplete="off">
             <span id="errorApellido"></span>
 
           </section>
@@ -40,10 +40,10 @@
           </section>
           <section class="centro">
             <span class="etiqueta"> Nombre Usuario</span>
-            <input id="user" class="input" name="User" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
+            <input id="user" class="input" name="User" placeholder="Usuario" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
             <span id="errorNombre"></span>
             <span class="etiqueta"> Contraseña</span>
-            <input id="pass" class="input" name="passs" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
+            <input id="pass" class="input" name="passs" placeholder="Contraseña" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
             <span id="errorNombre"></span>
 
             <section>
@@ -53,7 +53,7 @@
 
 
               <span class="etiqueta">Fecha Nac</span>
-            <input id="fecha" class="input" name="Fecha" placeholder="Por ejemplo, juan@dominio.com" type="date" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
+            <input id="fecha" class="input" name="Fecha" placeholder="Fecha: 19/05/1996" type="text" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
               <span id="errorFecha"></span>
 
             </section>
@@ -66,7 +66,7 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Correo</span>
-            <input id="email" class="input" name="email" type="text" onblur="revisar(this) ; revisarEmail(this)" onchange="revisar(this); revisarEmail(this)">
+            <input id="email" class="input" name="email" placeholder="Por ejemplo, juan@dominio.com" type="text" onblur="revisar(this) ; revisarEmail(this)" onchange="revisar(this); revisarEmail(this)">
             <span id="errorEmail"></span>
 
           </section>
@@ -87,7 +87,8 @@
     </form>
     <script type="text/javascript" src="js/validacion.js"></script>
   </article>
-  <footer>Todos los derechos a Abel Herrero Barrada</footer>
   
 </body>
+<footer>Todos los derechos a Abel Herrero Barrada</footer>
+  
 </html>

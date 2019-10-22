@@ -1,7 +1,9 @@
 * {
     margin: 0;
 }
-
+h1{
+    text-align: center;
+}
 .clear {
     clear: both;
 }
@@ -19,9 +21,12 @@ body {
 
 .h1 {
     border-bottom: 1px solid #B16412;
-
+    text-align: center;
 
 }
+/*footer{
+    
+}*/
 
 .zona1 {
   background-color: #F9E6D2;
@@ -58,6 +63,7 @@ font-size: small;
     width: 1000px;
     height: 800px;
     padding-top: 50px;
+    margin-bottom: 20px;
 }
 
 .input {

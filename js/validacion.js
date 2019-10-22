@@ -56,7 +56,7 @@ function validar() {
         datosCorrectos = false;
         error = "\n EL usuario es incorrecto, Solo letras";
     }
-    var expr=/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    var expr=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
     if (!expr.test(document.getElementById("pass").value)) {
         datosCorrectos = false;
         error = "\n La contraseña no es valida.";
