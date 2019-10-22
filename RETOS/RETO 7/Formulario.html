@@ -24,11 +24,11 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Nombre</span>
-            <input id="nombre" class="input" name="Nombre" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
+            <input id="nombre" class="input" name="Nombre" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off">
             <span id="errorNombre"></span>
 
             <span class="etiqueta">Apellido</span>
-            <input id="apellido" class="largeinput input" name="Apellido" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
+            <input id="apellido" class="input" name="Apellido" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" required autocomplete="off">
             <span id="errorApellido"></span>
 
           </section>
@@ -40,17 +40,20 @@
           </section>
           <section class="centro">
             <span class="etiqueta"> Nombre Usuario</span>
-			<input id="user" class="input" name="User" type="text" maxlength="20" onchange="comprobar(this,/[a-zA-Z]+$/,3,20)">
+            <input id="user" class="input" name="User" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
+            <span id="errorNombre"></span>
+            <span class="etiqueta"> Contraseña</span>
+            <input id="pass" class="input" name="passs" type="text" maxlength="20" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
             <span id="errorNombre"></span>
 
             <section>
               <span class="etiqueta">Telefono</span>
-              <input id="tlf" class="input" name="Telefono" placeholder="Tlf: xxx-xxx-xxx" type="text" maxlength="9" onchange="comprobar(this,/\d{9}/,9,9)">
+              <input id="telefono" class="input" name="Telefono" placeholder="Tlf: xxx-xxx-xxx" type="text" maxlength="9" onblur="revisar(this) ; revisaNumero(this)" onkeyup="revisar(this) ; revisaNumero(this)" autocomplete="off" required>
               <span id="errorTelefono"></span>
 
 
               <span class="etiqueta">Fecha Nac</span>
-              <input id="fecha" class="input" name="Fecha" placeholder="Por ejemplo, juan@dominio.com" type="date" onchange="comprobar(this,/^(0?[1-9]|[12]\d|3[01])(\/|\-)(0?[1-9]|1[012])(\/|\-)\d{4}$/)">
+            <input id="fecha" class="input" name="Fecha" placeholder="Por ejemplo, juan@dominio.com" type="date" onblur="revisar(this)" onkeyup="revisar(this)" autocomplete="off" required>
               <span id="errorFecha"></span>
 
             </section>
@@ -63,7 +66,7 @@
           </section>
           <section class="centro">
             <span class="etiqueta">Correo</span>
-            <input id="email" class="largeinput input" name="email" type="text" onchange="comprobar(this,/^[-\w.%+]+@(?:[A-Z0-9-]+\.)+[A-Z]+$/,1,20)">
+            <input id="email" class="input" name="email" type="text" onblur="revisar(this) ; revisarEmail(this)" onchange="revisar(this); revisarEmail(this)">
             <span id="errorEmail"></span>
 
           </section>
@@ -82,8 +85,9 @@
         </li>
       </ul>
     </form>
+    <script type="text/javascript" src="js/validacion.js"></script>
   </article>
   <footer>Todos los derechos a Abel Herrero Barrada</footer>
-  <script src="js/validacion.js"></script>
+  
 </body>
 </html>

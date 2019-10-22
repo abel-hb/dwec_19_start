@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <form name="myForm" onsubmit="return validar()" method="POST">
-        Nombre: <input type="text" name="fname" id="nombre" onkeyup="comprobar(this,/[a-zA-Z]+$/,3,20)"><br>
-        Apellidos: <input type="text" name="fape" id="apellido"><br>
-        Nombre Usuario: <input type="text" name="fuser" id="user"><br>
-        Contraseña: <input type="password" name="fpas" id="pass"><br>
-        Fecha Nac: <input type="date" name="ffec" id="fecha"><br>
-        Correo: <input type="email" name="fema" id="email"><br>
+        <section>
+
+        </section>
+        Nombre: <input type="text" name="fname" id="nombre" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Apellidos: <input type="text" name="fape" id="apellido" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Nombre Usuario: <input type="text" name="fuser" id="user" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Contraseña: <input type="text" name="fpas" id="pass" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Fecha Nac: <input type="text" name="ffec" id="fecha" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Correo: <input type="text" name="fema" id="email" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
+        Telefono: <input type="text" name="tlf" id="telefono" onblur="revisar(this)" onkeyup="revisar(this)"required autocomplete="off"><br>
         <input type="submit" value="Enviar"><input type="reset" value="Reiniciar">
     </form>
     <script src="js/validacion.js"></script>

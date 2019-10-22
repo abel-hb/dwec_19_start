@@ -51,12 +51,12 @@ function validar() {
         datosCorrectos = false;
         error = "\n El apellido es incorrecto, Solo letras";
     }
-    var expr=/\D[A-Za-zÁÉÍÓÚáéíóú]{3}/;
+    var expr=/^[a-zA-Záéíóú]+(\s[a-zA-Záéíóú]+)+$/;
     if (!expr.test(document.getElementById("user").value)) {
         datosCorrectos = false;
         error = "\n EL usuario es incorrecto, Solo letras";
     }
-    var expr=/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    var expr=/^[a-zA-Záéíóú]+(\s[a-zA-Záéíóú]+)+$/;
     if (!expr.test(document.getElementById("pass").value)) {
         datosCorrectos = false;
         error = "\n La contraseña no es valida.";

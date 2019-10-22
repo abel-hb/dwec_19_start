@@ -1,9 +1,10 @@
 alert("Hello World JS")
 function comprobar (campo, expr, iMinimo, iMaximo) {
-    let sSalida = '';
-    if (expr != "undefined" && !comprobarExpresion(campo, expr)){
-        sSalida += `El campo ${campo.getAttribute('id')} no se ajusta a ${expr}<br>`;
+    let sSalida == '';
+    if (expr !== "undefined" && !comprobarExpresion(campo, expr)){
+        alert(sSalida="El campo d campo".document.getAttribute("id"). "no se ajusta a " + $expr + "<br>");
     }
+
 
     if (!comprobarLongitud(campo, iMinimo, iMaximo)){
         sSalida += `El campo ${campo.getAttribute('id')}debe tener una longitud de ${iMinimo} a ${iMaximo} caracteres`;
@@ -12,7 +13,7 @@ function comprobar (campo, expr, iMinimo, iMaximo) {
     if (sSalida === ""){
         $(`#error${campo.getAttribute('id')}`).html('');
     }else{
-        $(`#error${campo.getAttribute('id')}`).html(sSalida);
+        $(`#error${campo.getAttribute('id')}`).innerH(sSalida);
     }
 }
 
