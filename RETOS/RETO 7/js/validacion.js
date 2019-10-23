@@ -60,7 +60,7 @@ function validar() {
         datosCorrectos = false;
         error = "\n EL usuario es incorrecto, Solo letras";
     }
-    //var expr=/\D[A-Za-zÁÉÍÓÚáéíóú]{3}/;
+    var expr=/^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
     if (document.getElementById("pass").value == "") {
         datosCorrectos = false;
         error = "\n La contraseña no es valida.";
@@ -88,11 +88,10 @@ function validar() {
         error = "\n La fecha no es valida (12/05/1996)";
     }
 
-
+    //This is to see that you have errors in the form.
     if (!datosCorrectos) {
         alert('Hay Errores En El formulario' + error);
     }
 
     return datosCorrectos;
-
 }
