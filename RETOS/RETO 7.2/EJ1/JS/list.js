@@ -1,9 +1,9 @@
 $(document) .ready(function(){
-    $("#prueba") .hover(function(){
-        //Para cuando pasa el raton
-        $("#prueba") .css("background-color","#fcfcfc");
+    $("div .prueba") .hover(function(){
+        //For when you pass the mouse
+        $(this) .css("color","#ffffff");
     } , function( ){
-         //Para cuando sale el raton
-        $("#prueba") .css("background-color","#000000");
+         //Stop when the mouse comes out
+        $(this) .css("color","#000000");
     });
 });

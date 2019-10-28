@@ -9,56 +9,56 @@ function $(selector){
 }
 
 $("#h").addEventListener("click", function(){
-var homer=document.getElementById("parrafoH");
+var list=document.getElementById("parrafoH");
 if(oHomer){
-    homer.style.display="block";
+    list.style.display="block";
     oHomer=false;
 }else{
-    homer.style.display="none";
+    list.style.display="none";
     oHomer=true;
 }
 });
 
 $("#m").addEventListener("click", function(){
-    var homer=document.getElementById("parrafoM");
-    if(oHomer){
-        homer.style.display="block";
-        oHomer=false;
+    var list=document.getElementById("parrafoM");
+    if(oMarge){
+        list.style.display="block";
+        oMarge=false;
     }else{
-        homer.style.display="none";
-        oHomer=true;
+        list.style.display="none";
+        oMarge=true;
     }
 });
 
 $("#b").addEventListener("click", function(){
-    var homer=document.getElementById("parrafoB");
-    if(oHomer){
-        homer.style.display="block";
-        oHomer=false;
+    var list=document.getElementById("parrafoB");
+    if(oBart){
+        list.style.display="block";
+        oBart=false;
     }else{
-        homer.style.display="none";
-        oHomer=true;
+        list.style.display="none";
+        oBart=true;
     }
 });
 
 $("#l").addEventListener("click", function(){
-        var homer=document.getElementById("parrafoL");
-        if(oHomer){
-            homer.style.display="block";
-            oHomer=false;
+        var list=document.getElementById("parrafoL");
+        if(oLisa){
+            list.style.display="block";
+            oLisa=false;
         }else{
-            homer.style.display="none";
-            oHomer=true;
+            list.style.display="none";
+            oLisa=true;
         }
 });
 
 $("#ma").addEventListener("click", function(){
-    var homer=document.getElementById("parrafoMA");
-    if(oHomer){
-        homer.style.display="block";
-        oHomer=false;
+    var list=document.getElementById("parrafoMA");
+    if(oMaggie){
+        list.style.display="block";
+        oMaggie=false;
     }else{
-        homer.style.display="none";
-        oHomer=true;
+        list.style.display="none";
+        oMaggie=true;
     }
     });
