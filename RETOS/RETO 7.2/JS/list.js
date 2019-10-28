@@ -1,0 +1,3 @@
+$('.list').sortable({
+    items: 'li'
+});
