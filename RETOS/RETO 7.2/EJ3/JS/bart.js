@@ -1,8 +1,8 @@
-var oHomer = true;
-var oMarge = true;
-var oBart = true;
-var oLisa = true;
-var oMaggie= true;
+var Homer = true;
+var Marge = true;
+var Bart = true;
+var Lisa = true;
+var Maggie= true;
 
 function $(selector){
     return document.querySelector(selector);
@@ -10,55 +10,55 @@ function $(selector){
 
 $("#h").addEventListener("click", function(){
 var list=document.getElementById("parrafoH");
-if(oHomer){
+if(Homer){
     list.style.display="block";
-    oHomer=false;
+    Homer=false;
 }else{
     list.style.display="none";
-    oHomer=true;
+    Homer=true;
 }
 });
 
 $("#m").addEventListener("click", function(){
     var list=document.getElementById("parrafoM");
-    if(oMarge){
+    if(Marge){
         list.style.display="block";
-        oMarge=false;
+        Marge=false;
     }else{
         list.style.display="none";
-        oMarge=true;
+        Marge=true;
     }
 });
 
 $("#b").addEventListener("click", function(){
     var list=document.getElementById("parrafoB");
-    if(oBart){
+    if(Bart){
         list.style.display="block";
-        oBart=false;
+        Bart=false;
     }else{
         list.style.display="none";
-        oBart=true;
+        Bart=true;
     }
 });
 
 $("#l").addEventListener("click", function(){
         var list=document.getElementById("parrafoL");
-        if(oLisa){
+        if(Lisa){
             list.style.display="block";
-            oLisa=false;
+            Lisa=false;
         }else{
             list.style.display="none";
-            oLisa=true;
+            Lisa=true;
         }
 });
 
 $("#ma").addEventListener("click", function(){
     var list=document.getElementById("parrafoMA");
-    if(oMaggie){
+    if(Maggie){
         list.style.display="block";
-        oMaggie=false;
+        Maggie=false;
     }else{
         list.style.display="none";
-        oMaggie=true;
+        Maggie=true;
     }
     });

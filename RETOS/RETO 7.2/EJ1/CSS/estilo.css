@@ -5,3 +5,8 @@ body{
 h1,h3{
     color: white;
 }
+li {
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+  }

@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/estilo.css">
     <title>GALERIA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
+
 <body>
-    <button id="insertar" onclick="insertar()">Insertar imagen</button>
-    <button id="eliminar" onclick="eliminar()">Eliminar imagen</button>
-    <table>
+    <button onclick="return insertar()">Insertar imagen</button>
+    <button onclick="return eliminar()">Eliminar imagen</button>
+    <table id="resultado" border="0">
+        <tr>
+        </tr>
     </table>
+
     <script src="JS/galeri.js"></script>
 </body>
+
 </html>
