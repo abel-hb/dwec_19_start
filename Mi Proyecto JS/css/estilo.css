@@ -1,0 +1,27 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-image: url('img/fondo.png');
+	background-repeat: repeat;
+	background-size: 100%;
+}
+#main {
+    width:100%;
+    margin:auto;
+    min-width:300px;
+    max-width:1200px
+}
+h1{
+  margin-left: 40%;
+  margin-top: 9%;
+}
+h4{
+    margin-left: 32%;
+    margin-top: 5%;
+  }
+div{
+  margin-left: 42%;
+  margin-top: 10px;
+}
