@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Trans Al-Andalus</title>
 </head>
+
 <body>
-    <h1>Trans Al-Andalus</h1>
+    <img class="iz" src="img/texto.png">
+    
+   
     <h4>Tu app para moverte por la ciudad o pueblos cercanos</h4>
     <div class="login">
         <p><input id="username" type="text" name="login" value="" placeholder="Usuario"></p><br>
@@ -16,9 +20,33 @@
         <button id="reset" type="reset" value="Borrar">Borrar</button>
         <button type="button" onclick="validar()">Iniciar Sesion</button>
     </div>
-    <div id="transporte" class="admin">
-        
+    <div id="oculto1" style="display: none;">
+        <h3>Selecione el destino al que quieres ir</h3>
+        <h2>CIUDADES</h2>
+        <select id="dt">
+            <option value="1">sevilla</option>
+            <option value="2">Huelva</option>
+            <option value="3">Cadiz</option>
+            </optgroup>
+        </select>
+        <h2>PUEBLOS</h2>
+        <select id="">
+            <option value="10">Algaba</option>
+            <option value="11">Brenes</option>
+            <option value="12">San Nicolas del Puerto</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div id="trans" style="display: none;">
+        <h2 id="bus">Autobus</h2>
+        <p id="pB">El trayecto tarda 20 mint y su precio es: 15€</p>
+        <h2 id="uber">Uber</h2>
+        <p id="pU">El trayecto tarda 20 mint y su precio es: 15€</p>
+        <h2 id="coche">Coche</h2>        
+        <p id="pC">El trayecto tarda 20 mint y su precio es: 15€</p>
     </div>
     <script src="js/proyecto.js"></script>
 </body>
+
 </html>

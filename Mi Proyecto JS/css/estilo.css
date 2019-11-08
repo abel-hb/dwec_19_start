@@ -2,11 +2,7 @@
 	padding: 0;
 	margin: 0;
 }
-body{
-	background-image: url('img/fondo.png');
-	background-repeat: repeat;
-	background-size: 100%;
-}
+
 #main {
     width:100%;
     margin:auto;
@@ -24,4 +20,7 @@ h4{
 div{
   margin-left: 42%;
   margin-top: 10px;
+}
+img.iz{
+  text-align: center;
 }
