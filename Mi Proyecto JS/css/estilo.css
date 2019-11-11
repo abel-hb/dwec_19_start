@@ -15,12 +15,79 @@ h1{
 }
 h4{
     margin-left: 32%;
-    margin-top: 5%;
+   /* margin-top: 5%;*/
   }
 div{
-  margin-left: 42%;
   margin-top: 10px;
 }
 img.iz{
+  margin-left: 10%;
+  float: left;
+}
+.login{
+    /* padding-left: 15%; */
+    float: initial;
+    /* margin-bottom: 12%; */
+    margin-left: 10%;
+    margin-right: 18%;
+    text-align: center;
+    padding: 22%;
+}
+.oculto1{
   text-align: center;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  padding-top: 12%;
+}
+.seleccion{
+  border: 3px solid #f7dd94;
+  background-color: #d7dd94;
+  color:black;
+  font-size:15px;
+  width:150px;
+  height:35px;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.footer{
+  padding: 2%;
+  background-color: dodgerblue;
 }

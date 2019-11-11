@@ -6,47 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Trans Al-Andalus</title>
 </head>
 
-<body>
-    <img class="iz" src="img/texto.png">
-    
-   
-    <h4>Tu app para moverte por la ciudad o pueblos cercanos</h4>
-    <div class="login">
-        <p><input id="username" type="text" name="login" value="" placeholder="Usuario"></p><br>
-        <p><input id="password" type="password" name="pass" value="" placeholder="Contraseña"></p><br>
-        <button id="reset" type="reset" value="Borrar">Borrar</button>
-        <button type="button" onclick="validar()">Iniciar Sesion</button>
+<body background="img/carretera-cielo-nubes-paisaje.jpg">
+    <img class="iz" src="img/titulo.png">
+    <div class="login" id="login">
+        <form action="#" style="max-width:400px;margin:auto">
+            <h2>Iniciar Sesion</h2>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input id="username" class="input-field" type="text" placeholder="Usuario" name="usrnm">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input id="password" class="input-field" type="password" placeholder="Contraseña" name="psw">
+            </div>
+            <button type="button" onclick="validar()" class="btn">Iniciar Sesion</button>
+        </form>
     </div>
-    <div id="oculto1" style="display: none;">
-        <h3>Selecione el destino al que quieres ir</h3>
-        <h2>CIUDADES</h2>
-        <select id="dt">
-            <option value="1">sevilla</option>
-            <option value="2">Huelva</option>
-            <option value="3">Cadiz</option>
-            </optgroup>
-        </select>
-        <h2>PUEBLOS</h2>
-        <select id="">
-            <option value="10">Algaba</option>
-            <option value="11">Brenes</option>
-            <option value="12">San Nicolas del Puerto</option>
-            </optgroup>
-        </select>
+    <div class="oculto1" id="trayecto">
+        <h3>Selecione el destino al que quieres ir: </h3><br>
+        <h2>CIUDADES</h2><br>
+        <form name="form" action="#">
+            <select class="seleccion" name="ciudades" onchange="mostrar_Opciones()">
+                <option value="0">Destinos
+                <option value="1">Sevilla
+                <option value="2">Huelva
+                <option value="3">Cadiz
+                <option value="4">Madrid
+            </select><br>
+            <br>
+            <h2>PUEBLOS</h2><br>
+            <select class="seleccion" name="opcion">
+                <option value="-">-
+            </select><br>
+
+        </form><br>
+        El Trayecto ha sido seleccionado pulsa para seguir: <button type="button"
+            onclick="visibiidadContenido()">Siguiente</button>
     </div>
 
-    <div id="trans" style="display: none;">
+    <div id="transporte">
         <h2 id="bus">Autobus</h2>
         <p id="pB">El trayecto tarda 20 mint y su precio es: 15€</p>
         <h2 id="uber">Uber</h2>
         <p id="pU">El trayecto tarda 20 mint y su precio es: 15€</p>
-        <h2 id="coche">Coche</h2>        
+        <h2 id="coche">Coche</h2>
         <p id="pC">El trayecto tarda 20 mint y su precio es: 15€</p>
     </div>
+    <footer class="footer"> <h4>Tu app para moverte por la ciudad o pueblos cercanos</h4></footer>
     <script src="js/proyecto.js"></script>
 </body>
-
 </html>

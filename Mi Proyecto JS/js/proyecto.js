@@ -1,54 +1,103 @@
 var objPersona = [
-	{
-		username: "admin",
-		password: "1234"
-	},
-	{
+    {
+        username: "admin",
+        password: "1234"
+    },
+    {
         username: "Abel1",
-		password: "1234"
-	},
-	{
-		username: "prada44",
-		password: "1234"
-	}
-
+        password: "1234"
+    },
+    {
+        username: "prada44",
+        password: "1234"
+    }
 ]
-function validar() {
-	let username = document.getElementById('username').value
-	let password = document.getElementById('password').value
 
-	for(let i = 0; i < objPersona.length; i++) {
-		// Chequeamos el usuario y la contraseña en el objPersona que es una array
-		if(username == objPersona[i].username && password == objPersona[i].password) {
-			window.location="index.html";
-      alert("Login Correcto")
-      return
-  		}
-  	}
-  	alert("Login Incorrecto, Introduce el usuario y contraseña correcta")
 
+window.onload = function () {
+    this.visibiidadContenido("trayecto");
+    this.visibiidadContenido("transporte");
 }
+
+function validar() {
+    let username = document.getElementById('username').value
+    let password = document.getElementById('password').value
+    let i
+    for (i = 0; i < objPersona.length; i++) {
+        // Chequeamos el usuario y la contraseña en el objPersona que es una array
+        if (username == objPersona[i].username && password == objPersona[i].password) {
+            visibiidadContenido("login");
+            visibiidadContenido("trayecto");
+            alert("Login Correcto");
+            break;
+        }
+    }
+    if (i == objPersona.length) {
+        alert("Login Incorrecto, Introduce el usuario y contraseña correcta");
+    }
+}
+
+function visibiidadContenido(id) {
+    if (document.getElementById) {
+        var objConten = document.getElementById(id);
+        objConten.style.display = (objConten.style.display == "none") ? "block" : "none";
+    }
+}
+var opt_1 = new Array ("-", "Brenes", "Cazalla", "Castiblanco", "...");
+var opt_2 = new Array ("-", "Lepe", "Ayamonte", "Cartalla", "...");
+var opt_3 = new Array ("-", "Chiclana", "Puerto Real", "Rota", "...");
+var opt_4 = new Array ("-", "Lavapies", "Toledo", "Avila", "...");
+
+//funcion que ejecutar el cambio dinamico
+function mostrar_Opciones(){
+    var ciudades;
+    //Se toma el valor de la ciudades del select"
+    ciudades = document.form.ciudades[document.form.ciudades.selectedIndex].value;
+    //se miran las "ciudades" que estan declarada
+    if(ciudades!=0){
+        //selecionamos las ciudades 
+        mOpcion=eval("opt_" + ciudades);
+        //se calcula el numero de ciudades
+        num_Option=mOpcion.length;
+        //marco el numero de opcion en el select
+        document.form.opcion.length = num_Option;
+        //para cada opcion del array, la pongo en el select
+        for(i=0; i<num_Option; i++){
+            document.form.opcion.options[i].value=mOpcion[i];
+            document.form.opcion.options[i].text=mOpcion[i];
+        }
+        }else{
+            //si no habia ninguna opcion seleccionada, elimino las ciudades del select
+            document.form.opcion.length = 1;
+            document.form.opcion.options[0].value="-";
+            document.form.opcion.options[0].text="-";
+        }
+        //Borrar las opciones
+        document.form.opcion.options[0].selected = true;
+    }
+
+/*
+function mostrarArray(){
+    console.log("Pueblos");
+    var text, i,sevilla,tlengt;
+    sevilla =["Brenes","Los Palacios","Cazalla"];
+    tlengt = sevilla.length;
+
+    text = "<select>";
+    for (i = 0;i < tlengt;i++){
+        text += "<option>" + sevilla[i] + "</option>";
+    }
+    text += "</select>";
+    document.getElementById("dt1").innerHTML = text;
+}
+
+
 
 var Bus = true;
 var Uber = true;
 var Coche = true;
-/*var Lisa = true;
-var Maggie= true;*/
-
-function $(selector){
-    return document.querySelector(selector);
-}
-
-$("#bus").addEventListener("click", function(){
-var list=document.getElementById("pB");
-if(Bus){
-    list.style.display="block";
-    Bus=false;
-}else{
-    list.style.display="none";
-    Bus=true;
-}
-});
+var Bici = true;
+var Helicoptero= true;
 
 $("#uber").addEventListener("click", function(){
     var list=document.getElementById("pU");
@@ -71,25 +120,25 @@ $("#coche").addEventListener("click", function(){
         Coche=true;
     }
 });
-/*
-$("#l").addEventListener("click", function(){
-        var list=document.getElementById("parrafoL");
-        if(Lisa){
+
+$("#bici").addEventListener("click", function(){
+        var list=document.getElementById("pBi");
+        if(Bici){
             list.style.display="block";
-            Lisa=false;
+            Bici=false;
         }else{
             list.style.display="none";
-            Lisa=true;
+            Bici=true;
         }
 });
 
-$("#ma").addEventListener("click", function(){
-    var list=document.getElementById("parrafoMA");
-    if(Maggie){
+$("#heli").addEventListener("click", function(){
+    var list=document.getElementById("pH");
+    if(Helicop){
         list.style.display="block";
-        Maggie=false;
+        Helicop=false;
     }else{
         list.style.display="none";
-        Maggie=true;
+        Helicop=true;
     }
 	});*/
