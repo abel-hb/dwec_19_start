@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!—- ShareThis BEGIN -—>
+    <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5dd1dec215fbee0013ab6ca3&product=sticky-share-buttons"></script>
+    <!—- ShareThis END -—>
     <title>Trans Al-Andalus</title>
 </head>
 
@@ -29,35 +32,203 @@
     </div>
     <div class="oculto1" id="trayecto">
         <h3>Selecione el destino al que quieres ir: </h3><br>
-        <h2>CIUDADES</h2><br>
+        <h3>PROVINCIAS</h3><br>
         <form name="form" action="#">
-            <select class="seleccion" name="ciudades" onchange="mostrar_Opciones()">
-                <option value="0">Destinos
-                <option value="1">Sevilla
-                <option value="2">Huelva
-                <option value="3">Cadiz
-                <option value="4">Madrid
+            <select id="ps-prov" class="seleccion" name="ciudades" onchange="capturarSelect(this)">
             </select><br>
             <br>
-            <h2>PUEBLOS</h2><br>
-            <select class="seleccion" name="opcion">
-                <option value="-">-
+            <h3>MUNICIPIOS</h3><br>
+            <select id="ps-mun" class="seleccion" name="opcion" onchange="capturarSelect1(this)">
             </select><br>
-
         </form><br>
-        El Trayecto ha sido seleccionado pulsa para seguir: <button type="button"
-            onclick="visibiidadContenido()">Siguiente</button>
+        <h5>El Trayecto ha sido seleccionado pulsa para seguir:</h5><br> <button type="button"
+            onclick="visibilidadContenido('transporte')" class="bot">Siguiente</button>
     </div>
-
     <div id="transporte">
-        <h2 id="bus">Autobus</h2>
-        <p id="pB">El trayecto tarda 20 mint y su precio es: 15€</p>
-        <h2 id="uber">Uber</h2>
-        <p id="pU">El trayecto tarda 20 mint y su precio es: 15€</p>
-        <h2 id="coche">Coche</h2>
-        <p id="pC">El trayecto tarda 20 mint y su precio es: 15€</p>
+        <div class="formato">
+                <div  style="text-align: center;">
+                        <h5 class="titul"><hr></hr>Por favor Marque la opcion/opciones para hacer su pedido:<hr></hr></h5>
+                        <table>
+                            <tr>
+                                <th>Transportes</th>
+                                <th></th>
+                                <th>Cantidad</th>
+                                <th></th>
+                                <th>Descripcion</th>
+                                <th>Precios</th>
+                            </tr>
+                            <tr>
+                                <td><img src="img/bus.png" alt="bus" width="50" height="50"></td>
+                                <td><input type="number" min="0" max="15"></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                                <td class="opcion"> <p>El trayecto desde<p id="resultado"></p> hasta <p id="resultado3"></p>y tarda 45 minutos.</p></td>
+                                <td></td>
+                                <td>2,5€</td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="img/taxi-icon-602136_960_720.png" alt="UBER" width="50" height="50"></td>
+                                <td><input type="number" min="0" max="15"></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                                <td class="opcion"><p id="pU">El trayecto desde<p id="resultado1"></p> hasta <p id="resultado4"></p>y tarda 35 minutos.</p></td>
+                                <td></td>
+                                <td>20€</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/coche.png" alt="COCHE" width="50" height="50"></td>
+                                <td><input type="number" min="0" max="15"></td>
+                                <td></td>
+                                <td><input type="checkbox"></td>
+                                <td class="opcion"><p id="pC">El trayecto desde<p id="resultado2"></p> hasta <p id="resultado5"></p>y tarda 20 minutos.</p></td>
+                                <td></td>
+                                <td>10€</td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                        <input type="button" class="btn" class="oculto-impresion" value="Enviar" onclick="guardar()" /><br>                
+                    </div>
+        </div>
+        <input id="btn" type="button" class="btn" class="oculto-impresion" value="Imprimir"onclick="printarDiv('imprimir')"><br> 
+        <button class="btn" id="cerrar" class="oculto-impresion" onclick="mostrarFormulario()">Contacto</button><br> 
+        <button class="btn" id="cerrar" class="oculto-impresion" onclick="cerrarSesion()">Cerrar Sesión</button><br> 
     </div>
-    <footer class="footer"> <h4>Tu app para moverte por la ciudad o pueblos cercanos</h4></footer>
+   
+    <div id="imprimir" class="impr">
+        <h2 id="bus">Autobus</h2>
+        <p id="texto2"></p>  
+        <h2 id="uber">Uber</h2>
+        <p id="texto2"></p>
+        <h2 id="coche">Coche</h2>
+        <p id="texto2"></p>
+       
+    </div>
+    <div id="formulario">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <div class="container">
+            <h2 class="text-center">Formulario de Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 pb-5">
+                    <!--Form with header-->
+                    <form action="#" method="post">
+                        <div class="card border-primary rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-info text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Contactanos</h3>
+                                    <p class="m-0">Con gusto te ayudaremos</p>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" id="nombre" name="nombre"
+                                            placeholder="Nombre y Apellido" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="ejemplo@gmail.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                        </div>
+                                        <textarea class="form-control" placeholder="Envianos tu Mensaje"
+                                            required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <input type="submit" value="Enviar" class="btn btn-info btn-block rounded-0 py-2">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!--Form with header-->
+                </div>
+            </div>
+        </div>
+        <button class="btn" id="cerrar" class="oculto-impresion" onclick="cerrarSesion()">Cerrar Sesión</button>
+        <button class="btn" id="cerrar" class="oculto-impresion" onclick="volverDivAnterior()">Volver</button>
+    </div>
+    <!-- <div id="ticket" class="ticket" style="text-align: center;">
+        <div class="formato" style="text-align: center;">
+        <img src="img/TRANS AL-ANDALUS (1).png" alt="Logotipo">
+        <p  id="Fecha_Reloj" class="centrado">TICKET DE VENTA
+            <br>Sevilla
+            <br></p>
+        <table class="centrado">
+            <thead>
+                <tr>
+                    <th class="cantidad">CANT</th>
+                    <th class="producto">PRODUCTO</th>
+                    <th class="precio">€€</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td class="cantidad">1.00</td>
+                    <td class="producto">VIAJE AUTOBUS</td>
+                    <td><p id="resultado"></p>a</td>
+                    <td class="precio">2.50€</td>
+                </tr>
+                <tr>
+                    <td class="cantidad">1.00</td>
+                    <td class="producto">VIAJE UBER</td>
+                    <td id="resultado1">a</td>
+                    <td class="precio">20.00€</td>
+                </tr>
+                <tr>
+                    <td class="cantidad">1.00</td>
+                    <td class="producto">VIAJE COCHE</td>
+                    <td id="resultado2">a</td>
+                    <td class="precio">10.00€</td>
+                </tr>
+                <tr>
+                    <td class="cantidad"></td>
+                    <td class="producto">TOTAL</td>
+                    <td class="precio">32.50€</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="centrado">¡GRACIAS POR SU COMPRA!</p>
+        <button class="oculto-impresion" onclick="printarDiv('ticket')">Imprimir</button>
+    </div>
+    </div> -->
+    <footer class="footer">
+        <h4>Tu app para moverte por la ciudad o pueblos cercanos</h4>
+    </footer>
     <script src="js/proyecto.js"></script>
+    <script src="js/pselect.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        // Create the selector by passing the elements of the sun to it.
+        var prov = document.getElementById('ps-prov');
+        var mun = document.getElementById('ps-mun');
+        new Pselect().create(prov, mun);
+    </script>
 </body>
+
 </html>

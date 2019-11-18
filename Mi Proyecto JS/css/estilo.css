@@ -21,8 +21,19 @@ div{
   margin-top: 10px;
 }
 img.iz{
-  margin-left: 10%;
+  margin-left: 13%;
   float: left;
+}
+.impr{
+  text-align: center;
+
+}
+h5.titul{
+  background-color: black;
+  color: white;
+}
+input.number{
+  padding: 12px;
 }
 .login{
     /* padding-left: 15%; */
@@ -57,7 +68,7 @@ img.iz{
 
 .icon {
   padding: 10px;
-  background: dodgerblue;
+  background: black;
   color: white;
   min-width: 50px;
   text-align: center;
@@ -89,5 +100,31 @@ img.iz{
 }
 .footer{
   padding: 2%;
+  color: white;
+  background-color: black;
+}
+.trans{
+  text-align: center;
+}
+img {
+  max-width: inherit;
+  width: inherit;
+}
+.bot{
   background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.bot:hover {
+  opacity: 1;
+}
+table{
+  background-color: white;
+  text-align: center;
+  margin-left: 31%;
+  padding: 30%;
+  padding-left: 45%;
 }
