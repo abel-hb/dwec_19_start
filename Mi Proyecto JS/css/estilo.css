@@ -21,7 +21,7 @@ div{
   margin-top: 10px;
 }
 img.iz{
-  margin-left: 13%;
+  margin-left: 20%;
   float: left;
 }
 .impr{
@@ -125,6 +125,18 @@ table{
   background-color: white;
   text-align: center;
   margin-left: 31%;
-  padding: 30%;
-  padding-left: 45%;
+  /* padding: 30%; */
+   padding-left: 5%;
+   padding-right: 7%;
+}
+h2.tituloForm{
+	margin-top: auto;
+    padding: 11%;
+    padding-bottom: 12%;
+    margin-left: 20%;
+}
+
+.Formu{
+	margin-left: 24%;
+    margin-right: -22%;
 }

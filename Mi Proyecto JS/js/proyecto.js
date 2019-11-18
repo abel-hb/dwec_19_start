@@ -84,9 +84,13 @@ function cerrarSesion() {
     //Hide Div
     visibilidadContenido("transporte");
     visibilidadContenido("trayecto");
-    visibilidadContenido("formulario");
-    visibilidadContenido("imprimir");
     visibilidadContenido("login");
+    //Reset the Input
+    document.getElementById('username').value = "";
+    document.getElementById('password').value = "";
+}
+function CerrarSesionLogin(){
+	visibilidadContenido("login");
     //Reset the Input
     document.getElementById('username').value = "";
     document.getElementById('password').value = "";
