@@ -140,3 +140,8 @@ h2.tituloForm{
 	margin-left: 24%;
     margin-right: -22%;
 }
+
+#map {
+  height: 100%;
+}
+

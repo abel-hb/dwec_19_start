@@ -97,6 +97,7 @@
         <input id="btn" type="button" class="btn" class="oculto-impresion" value="Imprimir"onclick="printarDiv('imprimir')"><br> 
         <button class="btn" id="cerrar" class="oculto-impresion" onclick="mostrarFormulario()">Contacto</button><br> 
         <button class="btn" id="cerrar" class="oculto-impresion" onclick="cerrarSesion()">Cerrar Sesión</button><br> 
+        <button class="btn" id="cerrar" class="oculto-impresion" onclick="visibilidadContenido('googleMap')">Mapa</button>
     </div>
    
     <div id="imprimir" class="impr">
@@ -107,6 +108,7 @@
         <h2 id="coche">Coche</h2>
         <p id="texto2"></p>
     </div>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
     <div id="formulario">
         <div class="container">
             <h2 class="tituloForm">Formulario de Contacto</h2>
@@ -167,6 +169,7 @@
         <button class="btn" id="cerrar" class="oculto-impresion" onclick="cerrarSesion()">Cerrar Sesión</button>
         <button class="btn" id="cerrar" class="oculto-impresion" onclick="volverDivAnterior()">Volver</button>
     </div>
+    
     <!-- <div id="ticket" class="ticket" style="text-align: center;">
         <div class="formato" style="text-align: center;">
         <img src="img/TRANS AL-ANDALUS (1).png" alt="Logotipo">
@@ -220,9 +223,13 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous">
 	</script>
-	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALpSPYeDA0y6lL1VQiALdMMjUigDQYGeM&callback=myMap"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     <script>
         // Create the selector by passing the elements of the sun to it.
         var prov = document.getElementById('ps-prov');

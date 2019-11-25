@@ -20,6 +20,8 @@ window.onload = function () {
     this.visibilidadContenido("transporte");
     this.visibilidadContenido("formulario");
     this.visibilidadContenido("imprimir");
+    this.visibilidadContenido("googleMap");
+    this.visibilidadContenido("myCarousel");
 }
 //To validate the users to enter the page
 function validar() {
@@ -99,6 +101,7 @@ function CerrarSesionLogin(){
 function mostrarFormulario(){
     visibilidadContenido("transporte");
     visibilidadContenido("trayecto");
+    visibilidadContenido("googleMap");
     visibilidadContenido("formulario");
 }
 function volverDivAnterior(){
@@ -125,6 +128,13 @@ function imprimir() {
     window.print();
 }
 
+function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(37.6000000,-4.5000000),
+      zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
 //Creation of the array for the select
 //var opt_1 = new Array("-", "Brenes", "Cazalla", "Castiblanco", "...");
 //var opt_2 = new Array("-", "Lepe", "Ayamonte", "Cartalla", "...");
@@ -170,6 +180,18 @@ var Coche = true;
 // var Bici = true;
 // var Helicoptero= true;
 
+$("#bus").addEventListener("click", function () {
+    var list = document.getElementById("pb");
+    if (Bus) {
+        list.style.display = "block";
+        Bus = false;
+    } else {
+        list.style.display = "none";
+        Bus = true;
+    }
+});
+
+
 $("#uber").addEventListener("click", function () {
     var list = document.getElementById("pU");
     if (Uber) {
@@ -181,17 +203,14 @@ $("#uber").addEventListener("click", function () {
     }
 });
 
-    function mostrarArray(){
-    console.log("Pueblos");
-    var text, i,sevilla,tlengt;
-    sevilla =["Brenes","Los Palacios","Cazalla"];
-    tlengt = sevilla.length;
-
-    text = "<select>";
-    for (i = 0;i < tlengt;i++){
-        text += "<option>" + sevilla[i] + "</option>";
+$("#coche").addEventListener("click", function () {
+    var list = document.getElementById("pC");
+    if (Coche) {
+        list.style.display = "block";
+        Coche = false;
+    } else {
+        list.style.display = "none";
+        Coche = true;
     }
-    text += "</select>";
-    document.getElementById("dt1").innerHTML = text;
-}
+});
 */
